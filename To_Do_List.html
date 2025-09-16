@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    input {
+      width: 70%;
+      padding: 10px;
+      margin-right: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      padding: 10px 14px;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    table {
+      width: 100%;
+      margin-top: 15px;
+      border-collapse: collapse;
+    }
+    td {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+    .task-text {
+      font-size: 16px;
+    }
+    .done {
+      color: green;
+      font-weight: bold;
+    }
+    .checkbox {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>To Do List</h1>
+    <input type="text" id="input" placeholder="Enter task" required>
+    <button onclick="taskTitle()">Add</button>
+    
+    <table id="taskTable">
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script>
+    function taskTitle() {
+      var taskName = document.getElementById('input').value.trim();
+      if (taskName === "") return;
+
+      var table = document.getElementById('taskTable').getElementsByTagName('tbody')[0];
+      var row = table.insertRow();
+
+      // Checkbox column
+      var checkCell = row.insertCell(0);
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.className = "checkbox";
+      checkCell.appendChild(checkbox);
+
+      // Task text column
+      var taskCell = row.insertCell(1);
+      taskCell.className = "task-text";
+      taskCell.textContent = taskName;
+
+      // Add check event
+      checkbox.addEventListener('change', function() {
+        if (this.checked) {
+          taskCell.classList.add("done");
+          taskCell.textContent = "✅ " + taskName;
+        } else {
+          taskCell.classList.remove("done");
+          taskCell.textContent = taskName;
+        }
+      });
+
+      document.getElementById('input').value = "";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Equal Cards Grid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      width: 450px;
+      margin: auto;
+      padding-bottom: 20px;
+      padding-top: 10px;
+    }
+
+  .cat {
+  color: rgb(3, 87, 244);
+  
+}
+
+    .cards-section {
+    display: grid;
+    grid-template-columns: repeat(2, max-content); 
+    justify-content: center; 
+    column-gap: 20px; 
+    row-gap: 20px;
+}
+
+
+   .card {
+  width: 200px; 
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+ transition: transform 0.3s ease;
+
+   }
+   
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+    .card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      margin: 10px 0 5px;
+    }
+
+    .card p {
+      font-size: 14px;
+    
+    }
+
+    .card button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      border: none;
+      background-color: rgb(76, 175, 80);
+      color: white;
+      border-radius: 5px;
+    }
+
+    .card button:hover {
+      background-color: rgba(76, 175, 80, 0.5);
+    }
+
+ 
+  </style>
+</head>
+<body>
+  <h1>Team Members Profile Card Page</h1>
+  <div class="cards-section">
+    <div class="card">
+      <img src="https://media.istockphoto.com/id/1568051602/photo/smiling-businesswoman-posing-in-modern-office.jpg?s=612x612&w=0&k=20&c=6YE4Wjak2gqSKsNa72JgxjXNngQB4WuAEca6JKwFKVI=" alt="Profile">
+      <h2>Jane Doe</h2>
+      <p class="cat">Frontend Developer</p>
+      <p>Jane builds interfaces that users love.</p>
+      <button>Contact</button>
+    </div>
+    <div class="card">
+      <img src="https://www.shutterstock.com/image-photo/happy-mid-aged-older-business-600nw-2322385015.jpg" alt="Profile">
+      <h2>John Smith</h2>
+      <p class="cat">Backend Developer</p>
+      <p>John connects frontend to databases seamlessly.</p>
+      <button>Contact</button>
+    </div>
+    <div class="card">
+      <img src="https://media.istockphoto.com/id/1433287126/photo/successful-businesswoman-portrait-in-the-office.jpg?s=612x612&w=0&k=20&c=4TWgOt69FxBHVqifXGXyobPzQcQvEbOBUlsLNbdkL-k=" alt="Profile">
+      <h2>Emily Johnson</h2>
+      <p class="cat">UX Designer</p>
+      <p>Emily improves user satisfaction with intuitive designs.</p>
+      <button>Contact</button>
+    </div>
+    <div class="card">
+      <img src="https://media.istockphoto.com/id/1399565382/photo/young-happy-mixed-race-businessman-standing-with-his-arms-crossed-working-alone-in-an-office.jpg?s=612x612&w=0&k=20&c=buXwOYjA_tjt2O3-kcSKqkTp2lxKWJJ_Ttx2PhYe3VM=" alt="Profile">
+      <h2>Michael Brown</h2>
+      <p class="cat">Project Manager</p>
+      <p>Michael ensures projects are delivered on time.</p>
+      <button>Contact</button>
+    </div>
+  </div>
+</body>
+</html>

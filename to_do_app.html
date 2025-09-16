@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>To Do List</title>
+</head>
+<body>
+	<h1>To Do List</h1>
+	<input type="text" name="Task" id="input" placeholder="Enter task" required>
+	<button onclick="taskTitle()">Submit</button>
+	<ul id="task"></ul>
+	<script>
+		function taskTitle() {
+			var taskName = document.getElementById('input').value;
+			var li = document.createElement("li");
+			li.innerHTML = taskName;
+			document.getElementById('task').appendChild(li);
+			document.getElementById('input').value = "";
+            li.addEventListener('click', function() {
+            if (li.style.textDecoration === "line-through") {
+                li.style.textDecoration = "none";
+            } else {
+                li.style.textDecoration = "line-through";
+            }
+        });
+          
+		}
+		
+		
+		
+	</script>
+</body>
+</html>

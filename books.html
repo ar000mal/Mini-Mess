@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Task Example</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Inika', serif;
+      margin: 30px;
+    }
+    table {
+      width: 600px;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px 16px;
+      font-size: 16px;
+    }
+    th {
+      background: #f0f0f0;
+    }
+    .right {
+      text-align: right;
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+    .action-btn {
+      background: #f6f6f6;
+      border: 1px solid #888;
+      border-radius: 4px;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.2s;
+    }
+    .action-btn:hover {
+      background: #d5d5d5;
+    }
+    .block {
+      display: block;
+      width: 200px;
+      background: #e1f5fe;
+    }
+    p{
+        width: 3px;
+    }
+    .inline {
+      display: inline;
+      width: 200px;
+      background: #ffe0b2;
+    }
+    .inline-block {
+      display: inline-block;
+      width: 200px;
+      background: #c8e6c9;
+    }
+    .demo-container span {
+      margin: 4px;
+      padding: 3px 8px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>Product Table Example</h2>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Product</th>
+      <th class="right">Price</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Book</td>
+      <td class="right">$12.99</td>
+      <td class="actions">
+        <button class="action-btn" title="Edit"><i class="fas fa-edit">Edit</i></button>
+        <button class="action-btn" title="Delete"><i class="fas fa-trash">Delete</i></button>
+      </td>
+    </tr>
+    <tr>
+      <td>Emily</td>
+      <td>Pen</td>
+      <td class="right">$2.00</td>
+      <td class="actions">
+        <button class="action-btn" value="Edit"><i class="fas fa-edit">Edit</i></button>
+        <button class="action-btn" value="Delete"><i class="fas fa-trash">Delete</i></button>
+      </td>
+    </tr>
+  </table>
+
+  <p>Hi. I am Aromal Prasad.</p>
+
+  <h2>Different Types of Links</h2>
+  <ul>
+    <li>
+      <a href="https://www.google.com" target="_blank">External Link</a>
+    </li>
+    <li>
+      <a href="#section1">Bookmark Link (Same Page)</a>
+    </li>
+    <li>
+        <a href="work.html">Internal Link</a>
+    </li>
+  </ul>
+
+  <h3 id="section1">Section 1 (Internal link target)</h3>
+
+</body>
+</html>
